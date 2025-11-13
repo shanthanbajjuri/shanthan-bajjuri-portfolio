@@ -160,5 +160,13 @@ section#intro p {
 .resume-button:hover {
   background-color: #005fa3;
 }
+body {
+  opacity: 0;
+  transition: opacity 0.8s ease-in;
+}
+
+body.fade-in {
+  opacity: 1;
+}
 
 
