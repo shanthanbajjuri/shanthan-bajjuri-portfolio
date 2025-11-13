@@ -187,16 +187,6 @@ body.fade-in {
   transform: translate(-50%, -50%);
   transition: top 0.05s ease, left 0.05s ease;
 }
-body {
-  background: linear-gradient(135deg, #EEF4FF, #D9E8FF, #BED7FF);
-  margin: 0;
-  font-family: Arial, sans-serif;
-  opacity: 0;
-  transition: opacity 0.8s ease-in;
-}
 
-body.fade-in {
-  opacity: 1;
-}
 
 
