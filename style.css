@@ -168,5 +168,24 @@ body {
 body.fade-in {
   opacity: 1;
 }
+.mouse-highlight {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 9999;
+}
+
+.spotlight {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 80%);
+  transform: translate(-50%, -50%);
+  transition: top 0.05s ease, left 0.05s ease;
+}
 
 
