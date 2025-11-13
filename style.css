@@ -116,4 +116,18 @@ section#intro p {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
+.resume-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #0077cc;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.resume-button:hover {
+  background-color: #005fa3;
+}
 
