@@ -35,7 +35,20 @@
     document.body.classList.add("fade-in");
   });
 </script>
+  <!-- Mouse Highlighter -->
+<div class="mouse-highlight">
+  <div class="spotlight"></div>
+</div>
+<script>
+  const spotlight = document.querySelector(".spotlight");
+
+  document.addEventListener("mousemove", (e) => {
+    spotlight.style.left = `${e.clientX}px`;
+    spotlight.style.top = `${e.clientY}px`;
+  });
+</script>
 </body>
 
 </html>
+
 
