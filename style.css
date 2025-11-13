@@ -88,4 +88,17 @@ section#intro p {
     opacity: 1;
   }
 }
+.profile-photo {
+  width: 150px;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-photo:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
 
