@@ -342,3 +342,325 @@ h1, h2, h3, h4, h5, h6 {
     section#intro { margin: 3rem 1rem; padding: 2.5rem 1.5rem; }
     .profile-photo { width: 150px; height: 150px; }
 }
+
+/* ========================================
+   WHITE TEXT ENFORCEMENT & ENHANCEMENTS
+   ======================================== */
+
+/* Force all text to white for maximum visibility */
+body, p, span, div, a, li, td, th, label, input, textarea, select {
+    color: #ffffff !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #ffffff !important;
+}
+
+/* Ensure paragraphs and text blocks are white */
+section p, article p, div p {
+    color: rgba(255, 255, 255, 0.95) !important;
+}
+
+/* Navigation links white */
+nav a, nav a:visited {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+nav a:hover {
+    color: #ffffff !important;
+}
+
+/* ========================================
+   3D ANIMATED BACKGROUND OBJECTS
+   ======================================== */
+
+.background-3d-scene {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    perspective: 1200px;
+    overflow: hidden;
+}
+
+/* 3D Floating Cubes */
+.cube-3d {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    transform-style: preserve-3d;
+    animation: float3dCube 25s infinite ease-in-out;
+}
+
+.cube-3d .face {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(192, 192, 192, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.cube-3d .face.front  { transform: rotateY(0deg) translateZ(50px); }
+.cube-3d .face.back   { transform: rotateY(180deg) translateZ(50px); }
+.cube-3d .face.right  { transform: rotateY(90deg) translateZ(50px); }
+.cube-3d .face.left   { transform: rotateY(-90deg) translateZ(50px); }
+.cube-3d .face.top    { transform: rotateX(90deg) translateZ(50px); }
+.cube-3d .face.bottom { transform: rotateX(-90deg) translateZ(50px); }
+
+.cube-3d:nth-child(1) {
+    top: 10%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.cube-3d:nth-child(2) {
+    top: 70%;
+    left: 80%;
+    animation-delay: -8s;
+}
+
+.cube-3d:nth-child(3) {
+    top: 30%;
+    left: 75%;
+    animation-delay: -15s;
+}
+
+/* 3D Floating Spheres */
+.sphere-3d {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, 
+        rgba(255, 255, 255, 0.2), 
+        rgba(212, 175, 55, 0.15),
+        rgba(192, 192, 192, 0.1));
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.4),
+                inset -10px -10px 20px rgba(0, 0, 0, 0.3);
+    animation: float3dSphere 20s infinite ease-in-out;
+}
+
+.sphere-3d:nth-child(4) {
+    top: 50%;
+    left: 20%;
+    animation-delay: -5s;
+}
+
+.sphere-3d:nth-child(5) {
+    top: 80%;
+    left: 50%;
+    animation-delay: -12s;
+}
+
+/* 3D Rotating Rings */
+.ring-3d {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border: 12px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50%;
+    box-shadow: 0 0 30px rgba(212, 175, 55, 0.5),
+                inset 0 0 30px rgba(192, 192, 192, 0.2);
+    animation: rotate3dRing 18s infinite linear;
+}
+
+.ring-3d:nth-child(6) {
+    top: 15%;
+    left: 85%;
+}
+
+.ring-3d:nth-child(7) {
+    top: 60%;
+    left: 5%;
+    animation-delay: -9s;
+}
+
+/* 3D Pyramids */
+.pyramid-3d {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-bottom: 100px solid rgba(102, 126, 234, 0.2);
+    filter: drop-shadow(0 0 25px rgba(102, 126, 234, 0.4));
+    animation: float3dPyramid 22s infinite ease-in-out;
+}
+
+.pyramid-3d:nth-child(8) {
+    top: 40%;
+    left: 90%;
+    animation-delay: -6s;
+}
+
+/* Floating Particles */
+.particle-3d {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    animation: particleFloat 20s infinite ease-in-out;
+}
+
+.particle-3d:nth-child(n+9):nth-child(-n+20) {
+    width: 4px;
+    height: 4px;
+    animation-duration: 25s;
+}
+
+/* Position particles randomly */
+.particle-3d:nth-child(9) { top: 20%; left: 30%; animation-delay: -2s; }
+.particle-3d:nth-child(10) { top: 45%; left: 65%; animation-delay: -7s; }
+.particle-3d:nth-child(11) { top: 75%; left: 25%; animation-delay: -11s; }
+.particle-3d:nth-child(12) { top: 35%; left: 55%; animation-delay: -4s; }
+.particle-3d:nth-child(13) { top: 65%; left: 85%; animation-delay: -14s; }
+.particle-3d:nth-child(14) { top: 10%; left: 45%; animation-delay: -9s; }
+.particle-3d:nth-child(15) { top: 85%; left: 15%; animation-delay: -16s; }
+
+/* ========================================
+   3D ANIMATION KEYFRAMES
+   ======================================== */
+
+@keyframes float3dCube {
+    0%, 100% {
+        transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg) translateY(0px);
+    }
+    25% {
+        transform: rotateX(90deg) rotateY(90deg) rotateZ(45deg) translateY(-40px);
+    }
+    50% {
+        transform: rotateX(180deg) rotateY(180deg) rotateZ(90deg) translateY(-20px);
+    }
+    75% {
+        transform: rotateX(270deg) rotateY(270deg) rotateZ(135deg) translateY(-50px);
+    }
+}
+
+@keyframes float3dSphere {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px) scale(1);
+        opacity: 0.3;
+    }
+    50% {
+        transform: translateY(-60px) translateX(30px) scale(1.3);
+        opacity: 0.6;
+    }
+}
+
+@keyframes rotate3dRing {
+    0% {
+        transform: rotateX(60deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+        transform: rotateX(60deg) rotateY(360deg) rotateZ(360deg);
+    }
+}
+
+@keyframes float3dPyramid {
+    0%, 100% {
+        transform: rotateY(0deg) rotateX(0deg) translateY(0px);
+    }
+    50% {
+        transform: rotateY(180deg) rotateX(180deg) translateY(-40px);
+    }
+}
+
+@keyframes particleFloat {
+    0% {
+        transform: translateY(0) translateX(0) scale(0.5);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) translateX(50px) scale(1);
+        opacity: 0;
+    }
+}
+
+/* ========================================
+   ADVANCED ELEMENT ANIMATIONS
+   ======================================== */
+
+/* Animated gradient border pulse */
+@keyframes borderPulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.6);
+    }
+}
+
+section#intro, .card {
+    animation: borderPulse 4s ease-in-out infinite;
+}
+
+/* Text shimmer animation */
+@keyframes textShimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+h1 {
+    background-size: 200% auto;
+    animation: textShimmer 5s linear infinite;
+}
+
+/* Floating animation for elements */
+@keyframes gentleFloat {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.profile-photo {
+    animation: gentleFloat 6s ease-in-out infinite;
+}
+
+/* Glowing pulse animation */
+@keyframes glowPulse {
+    0%, 100% {
+        filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.3));
+    }
+    50% {
+        filter: drop-shadow(0 0 25px rgba(212, 175, 55, 0.6));
+    }
+}
+
+.resume-button {
+    animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Scale pulse on hover */
+@keyframes scalePulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+.card:hover {
+    animation: scalePulse 2s ease-in-out infinite;
+}
+
